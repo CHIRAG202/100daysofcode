@@ -1,0 +1,41 @@
+int countDigits(int n)
+{
+   //Your code here
+   if(n==0)
+   return 0;
+   else
+   return 1+countDigits(n/10);
+}
+
+////
+
+int digitalRoot(int n)
+{
+    //Your code here
+    int sum=0,x;
+    while(n>0){
+        sum=sum+n%10;
+        x=sum+digitalRoot(n/10);
+    
+    if(x/10!=0)
+    return digitalRoot(x);
+    else 
+    return x;
+}
+        
+    } 
+
+////
+
+long long fibonacci(int n)
+{
+    //Your code here
+    if(n==1 || n==2)
+    return 1;
+    else
+    return fibonacci(n-1)+fibonacci(n-2);
+}
+
+
+////
+
