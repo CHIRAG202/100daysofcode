@@ -1,0 +1,32 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int n,m,a,b,x,y,net,res;
+    cin>>n>>m>>a>>b;
+    if(n>m){
+    if(n%m==0)
+    {
+        x=n/m;
+        res=min(b*x,n*a);
+                    }
+    else
+    {
+        x=n/m;
+        y=x*m;
+        net=n-y;
+        if(a<b)
+        res=(net*a)+(x*b);
+        else
+        res=(x+1)*b;
+    }}
+    else
+    {
+       if((n*a)<b)
+        res=n*a;
+       else
+        res=b;
+    }
+    cout<<res;
+    return 0;
+}
