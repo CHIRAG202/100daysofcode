@@ -1,0 +1,22 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    long long n,x=0,res;
+    cin>>n;
+    if(n>=0)
+    res=n;
+    else
+     {
+ 
+        if(-n<100){
+            res=max(n/10,n%10);
+        }
+        else{
+        x=(n/100)*10-((-n)%10);
+        res=max(n/10,x);
+        }
+    }
+   cout<<res;
+    return 0;
+}
